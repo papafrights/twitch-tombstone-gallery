@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Frankie's Tombstone Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>💀 Frankie's Twitch Tombstone Gallery 💀</h1>
+  <p>Here lie the names of those brave enough to redeem horrors unspeakable...</p>
+  
+  <div class="tombstone-grid" id="gallery"></div>
+
+  <script>
+    fetch('./data/tombstones.json')
+      .then(res => res.json())
+      .then(data => {
+        const gallery = document.getElementById('gallery');
+        data.forEach(entry => {
+          const div = document.createElement('div');
+          div.className = 'tombstone';
+          div.innerHTML = `
+            <img src="${entry.image}" alt="${entry.name}">
+            <h3>${entry.name}</h3>
+            <p>${entry.title}</p>
+            <small>${entry.date}</small>
+          `;
+          gallery.appendChild(div);
+        });
+      });
+  </script>
+</body>
+</html>
