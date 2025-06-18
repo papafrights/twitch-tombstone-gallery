@@ -1,4 +1,4 @@
-# 🪦 Frankie's Twitch Tombstone Gallery
+# Twitch Tombstone Gallery
 
 Welcome, mortal. This is your gateway to the Twitch tombstones — a digital graveyard of legendary viewers who dared to redeem the cursed, the hilarious, and the haunted.
 
